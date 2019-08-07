@@ -1,4 +1,4 @@
-def fitSingleTrial(X, hrf):
+def single_trial_fit(X, hrf): # X is timecourse of voxel, hrf is hrf timecourse over same time
     X = np.array(X).reshape(len(X),1) # add voxel time course as list - converst to np.array column vector
     hrf = np.array(hrf).reshape(len(hrf),1) # add hrf as list - converts to np.array column vector
     DM = np.concatenate((hrf, np.ones(np.shape(hrf))), axis=1) # creates 2d array - DESIGN MATRIX
